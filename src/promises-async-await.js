@@ -27,3 +27,17 @@ async function minhaFuncao() {
 }
 
 minhaFuncao();
+
+async function buscarRepositorios() {
+  try {
+    let response = await fetch("https://api.github.com/users/kaykeeb3/repos");
+    if (!response.ok) {
+      throw new Error("Erro ao buscas as informações!");
+    }
+    let repositorios = await response.json();
+    console.log(repositorios);
+  } catch (error) {
+    console.log(error.mensagem);
+  }
+}
+buscarRepositorios();
