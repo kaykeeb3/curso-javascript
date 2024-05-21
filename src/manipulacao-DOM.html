@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exemplo DOM</title>
+  </head>
+  <body>
+    <div id="minhaDiv">Texto inicial</div>
+    <button onclick="mudarTexto()">Clique aqui</button>
+
+    <script>
+      function mudarTexto() {
+        let div = document.getElementById("minhaDiv");
+        div.innerHTML = "Texto alterado!";
+      }
+    </script>
+  </body>
+</html>
