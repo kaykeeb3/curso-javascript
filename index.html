@@ -1,13 +1,315 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Curos completo de JS 2024</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Mini Curso de JavaScript</title>
   </head>
   <body>
-    <h1>hello world</h1>
-  </body>
+    <div class="container animated">
+      <h1>Mini Curso de JavaScript</h1>
 
-  <script src="/src/sintaxe-tipos-dados.js"></script>
+      <div class="section">
+        <h2>Sintaxe e Tipos de Dados</h2>
+        <p>
+          Nesta seção, você aprenderá sobre a sintaxe básica do JavaScript e os
+          tipos de dados.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Números
+let numeroInteiro = 10;
+let numeroDecimal = 3.14;
+
+// String
+let texto = "Olá, Mundo!";
+
+// Booleano
+let booleano = true;
+
+// Undefined
+let indefinido;
+
+// Null
+let nulo = null;
+
+// Objeto
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    casado: false
+};
+
+// Array
+let frutas = ["Maçã", "Banana", "Laranja"];
+
+// Função
+function soma(a, b) {
+    return a + b;
+}
+console.log(soma(5, 3)); // Saída: 8
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Variáveis e Operadores</h2>
+        <p>
+          Aqui, você aprenderá sobre declaração de variáveis, operadores
+          aritméticos, de atribuição, de comparação, lógicos e outros.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Variáveis
+let variavelGlobal = "Global";
+const PI = 3.14;
+
+// Operadores Aritméticos
+let soma = 5 + 3;
+let subtracao = 5 - 3;
+let multiplicacao = 5 * 3;
+let divisao = 5 / 3;
+let restoDivisao = 5 % 3;
+
+// Operadores de Atribuição
+let x = 10;
+x += 5; // x = x + 5;
+
+// Operadores de Comparação
+let igual = 5 == "5"; // true
+let estritamenteIgual = 5 === "5"; // false
+
+// Operadores Lógicos
+let condicao1 = true;
+let condicao2 = false;
+let resultadoE = condicao1 && condicao2; // false
+let resultadoOU = condicao1 || condicao2; // true
+let resultadoNao = !condicao1; // false
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Estruturas de Controle</h2>
+        <p>
+          Esta seção aborda estruturas condicionais (if, else), estruturas de
+          repetição (for, while) e outras.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// if...else
+let idade = 18;
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+} else {
+    console.log("Você é menor de idade.");
+}
+
+// for
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// while
+let contador = 0;
+while (contador < 5) {
+    console.log(contador);
+    contador++;
+}
+
+// switch
+let diaSemana = "Segunda";
+switch (diaSemana) {
+    case "Segunda":
+        console.log("Hoje é segunda-feira.");
+        break;
+    case "Terça":
+        console.log("Hoje é terça-feira.");
+        break;
+    default:
+        console.log("Hoje é outro dia.");
+}
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Funções</h2>
+        <p>
+          Aqui você aprenderá sobre declaração de funções, parâmetros, escopo e
+          retorno de valores.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Declaração de Função
+function saudacao(nome) {
+    return `Olá, ${nome}!`;
+}
+console.log(saudacao("Mundo")); // Saída: Olá, Mundo!
+
+// Parâmetros Padrão
+function calcularArea(base, altura = 5) {
+    return base * altura;
+}
+console.log(calcularArea(10)); // Saída: 50
+
+// Funções de Setas
+let quadrado = (x) => x * x;
+console.log(quadrado(5)); // Saída: 25
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Arrays e Objetos</h2>
+        <p>
+          Nesta seção, você aprenderá sobre arrays, objetos, métodos de array e
+          iteração de objetos.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Arrays
+let frutas = ["Maçã", "Banana", "Laranja"];
+let pessoa = {
+    nome: "João",
+    idade: 30,
+    casado: false
+};
+console.log(pessoa.nome); // Saída: João
+
+// Métodos de Array
+let numeros = [1, 2, 3, 4, 5];
+let dobrados = numeros.map(numero => numero * 2);
+console.log(dobrados); // Saída: [2, 4, 6, 8, 10]
+
+// Iteração de Objetos
+for (let chave in pessoa) {
+    console.log(`${chave}: ${pessoa[chave]}`);
+}
+
+// Métodos de Objeto
+let carro = {
+    marca: "Toyota",
+    modelo: "Corolla",
+    ano: 2021,
+    ligar: function() {
+        console.log("O carro está ligado.");
+    }
+};
+carro.ligar();
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Manipulação de DOM</h2>
+        <p>
+          Aqui, você aprenderá a interagir com a estrutura da página HTML usando
+          JavaScript.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Selecionar Elemento por ID
+let minhaDiv = document.getElementById("minhaDiv");
+minhaDiv.innerText = "Texto alterado!";
+
+// Selecionar Elemento por Classe
+let meusParagrafos = document.getElementsByClassName("paragrafo");
+for (let paragrafo of meusParagrafos) {
+    paragrafo.style.color = "blue";
+}
+
+// Criar Novo Elemento
+let novoParagrafo = document.createElement("p");
+novoParagrafo.innerText = "Novo parágrafo";
+document.body.appendChild(novoParagrafo);
+
+// Eventos
+let meuBotao = document.getElementById("meuBotao");
+meuBotao.addEventListener("click", function() {
+    alert("Botão clicado!");
+});
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Eventos</h2>
+        <p>
+          Aqui, você aprenderá a lidar com eventos do usuário, como clique de
+          botão, movimento do mouse, e outros.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Evento de Clique
+let botao = document.getElementById("meuBotao");
+botao.addEventListener("click", function() {
+    console.log("Botão clicado!");
+});
+
+// Evento de Mouse
+let elemento = document.getElementById("meuElemento");
+elemento.addEventListener("mouseover", function() {
+    console.log("Mouse sobre o elemento!");
+});
+
+// Evento de Teclado
+document.addEventListener("keydown", function(event) {
+    console.log("Tecla pressionada: " + event.key);
+});
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Promises e Async/Await</h2>
+        <p>
+          Aqui, você aprenderá sobre programação assíncrona em JavaScript usando
+          Promises e async/await.
+        </p>
+        <div class="code-example">
+          <pre><code>
+// Promises
+let minhaPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Operação concluída!");
+    }, 2000);
+});
+
+minhaPromise.then((mensagem) => {
+    console.log(mensagem);
+}).catch((erro) => {
+    console.error(erro);
+});
+
+// Async/Await
+async function minhaFuncao() {
+    try {
+        let resultado = await minhaPromise;
+        console.log(resultado);
+    } catch (erro) {
+        console.error(erro);
+    }
+}
+
+minhaFuncao();
+                </code></pre>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Conclusão</h2>
+        <p>
+          Parabéns! Agora você concluiu o nosso mini curso de JavaScript.
+          Continue praticando e explorando mais sobre esta linguagem incrível!
+        </p>
+      </div>
+    </div>
+
+    <!-- Botão de Voltar ao Topo -->
+    <button id="backToTop">Topo</button>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
